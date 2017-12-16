@@ -1,7 +1,19 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { FontAwesome, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
-import { white, blue } from './colors'
+import { white, red, orange, pink, lightPurp, blue } from './colors'
+
+const styles = StyleSheet.create({
+  iconContainer: {
+    padding: 5,
+    borderRadius: 8,
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 20,
+  }
+})
 
 export function getMetricMetaInfo (metric) {
   const info = {
@@ -13,11 +25,10 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          //
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <MaterialIcons
               name='directions-run'
-              color={blue}
+              color={white}
               size={35}
             />
           </View>
@@ -32,11 +43,10 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View>
-          {/* // <View style={[styles.iconContainer, {backgroundColor: orange}]}> */}
+           <View style={[styles.iconContainer, {backgroundColor: orange}]}>
             <MaterialCommunityIcons
               name='bike'
-              color={blue}
+              color={white}
               size={32}
             />
           </View>
@@ -51,11 +61,10 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          // <View style={[styles.iconContainer, {backgroundColor: blue}]}>
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: blue}]}>
             <MaterialCommunityIcons
               name='swim'
-              color={blue}
+              color={white}
               size={35}
             />
           </View>
@@ -70,11 +79,10 @@ export function getMetricMetaInfo (metric) {
       type: 'slider',
       getIcon() {
         return (
-          // <View style={[styles.iconContainer, {backgroundColor: lightPurp}]}>
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: lightPurp}]}>
             <FontAwesome
               name='bed'
-              color={blue}
+              color={white}
               size={30}
             />
           </View>
@@ -89,11 +97,10 @@ export function getMetricMetaInfo (metric) {
       type: 'slider',
       getIcon() {
         return (
-          // <View style={[styles.iconContainer, {backgroundColor: pink}]}>
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: pink}]}>
             <MaterialCommunityIcons
               name='food'
-              color={blue}
+              color={white}
               size={35}
             />
           </View>

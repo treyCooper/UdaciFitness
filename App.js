@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import AddEntry from './components/AddEntry'
 import { createStore } from 'redux'
@@ -9,7 +9,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={createStore(reducer)}>
-        <View >
+        <View style={{flex: 1}}>
           <AddEntry />
         </View>
       </Provider>
